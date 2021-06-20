@@ -5,16 +5,7 @@
  */
 function listenForClicks() {
 document.addEventListener("click", (e) => {
-    /**
-     * Just log the error to the console.
-     */
-    function reportError(error) {
-    console.error(`Could not beastify: ${error}`);
-    }
-        
     console.log("popup loaded")
-    let videoProgress = document.querySelector('video').currentTime
-    console.log(videoProgress)
 });
 }
 
@@ -31,7 +22,7 @@ function reportExecuteScriptError(error) {
  * and add a click handler.
  * If we couldn't inject the script, handle the error.
  */
-browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
+browser.tabs.executeScript({file: "../content_scripts/varmonize.js"})
 .then(listenForClicks)
 .catch(reportExecuteScriptError);
   

@@ -21,13 +21,5 @@
         "default_icon": "icons/icon-96.png",
         "default_title": "Varmonize",
         "default_popup": "popup/popup.html"
-    },
-
-    "content_scripts": [
-      {
-        "matches": ["*://*/*"],
-        "js": ["content_scripts/varmonize.js"]
-      }
-    ]
-  
+    }
   }
